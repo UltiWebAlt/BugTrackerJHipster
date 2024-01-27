@@ -1,0 +1,41 @@
+
+application {
+  config {
+    baseName bugTrackerJHipster
+    applicationType monolith
+    packageName com.mycompany.bugtracker
+    authenticationType jwt
+    prodDatabaseType mysql
+    clientFramework angularX
+  }
+  entities *
+}
+
+entity Project {
+	name String
+}
+
+entity Label {
+	label String minlength(3)
+}
+entity User {
+	login String
+}
+
+entity Ticket {
+	title String required
+    description String
+    dueDate LocalDate
+    done Boolean
+}
+
+relationship ManyToMany {
+    Ticket{label(label)} to Label{ticket}
+}
+
+relationship ManyToOne {
+    Ticket{project(name)} to Project,
+    Ticket{assignedTo(login)} to User{ticket}
+}
+
+paginate Ticket with pagination
