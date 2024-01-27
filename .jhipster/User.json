@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20240127021052"
+  },
+  "applications": ["bugTrackerJHipster"],
+  "entityTableName": "user",
+  "fields": [
+    {
+      "fieldName": "login",
+      "fieldType": "String"
+    }
+  ],
+  "name": "User",
+  "relationships": [],
+  "searchEngine": "no"
+}

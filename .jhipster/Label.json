@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20240127021051"
+  },
+  "applications": ["bugTrackerJHipster"],
+  "entityTableName": "label",
+  "fields": [
+    {
+      "fieldName": "label",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength"],
+      "fieldValidateRulesMinlength": "3"
+    }
+  ],
+  "name": "Label",
+  "relationships": [
+    {
+      "otherEntityName": "ticket",
+      "otherEntityRelationshipName": "label",
+      "relationshipName": "ticket",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}
